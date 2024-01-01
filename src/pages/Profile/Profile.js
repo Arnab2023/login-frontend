@@ -19,16 +19,19 @@ const Profile = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:8001/auth/update", {
-        userId,
-        name,
-        email,
-        password,
-        age,
-        gender,
-        dob,
-        mobile,
-      });
+      const response = await axios.post(
+        "https://login-backend-gamma.vercel.app/auth/update",
+        {
+          userId,
+          name,
+          email,
+          password,
+          age,
+          gender,
+          dob,
+          mobile,
+        }
+      );
 
       // console.log(response.data);
       setLoggedUser({

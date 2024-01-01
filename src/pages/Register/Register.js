@@ -16,7 +16,7 @@ const Register = () => {
     if (confirm === password) {
       try {
         const response = await axios.post(
-          "http://localhost:8001/auth/register",
+          "https://login-backend-gamma.vercel.app/auth/register",
           {
             name,
             email,
